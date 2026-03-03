@@ -1,0 +1,8 @@
+# tasks.txt
+# One task per line. The orchestrator marks completed tasks with [DONE].
+# Lines starting with # are ignored.
+
+Implement a function `add(a, b)` that returns the sum of two numbers and save it to src/math_utils.py
+Implement a function `factorial(n)` that returns n! (raise ValueError for negative n) in src/math_utils.py
+Implement a function `is_prime(n)` that returns True if n is prime, False otherwise, in src/math_utils.py
+Implement a CLI script in src/main.py that reads two numbers from stdin and prints their sum, product, and whether each is prime
