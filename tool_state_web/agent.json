@@ -1,0 +1,32 @@
+{
+  "name": "weather_coordinator_stateful",
+  "description": "A state-aware weather and time information agent. It maintains user preferences for temperature units (Celsius/Fahrenheit) across a session and can delegate social interactions to sub-agents.",
+  "version": "1.0.0",
+  "url": "http://localhost:8001/a2a/weather_coordinator_stateful",
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["application/json"],
+  "capabilities": {
+    "stateful_memory": true,
+    "multi_agent_delegation": true
+  },
+  "skills": [
+    {
+      "id": "weather_retrieval",
+      "name": "Stateful Weather Check",
+      "description": "Retrieve current weather for specific cities with automatic unit conversion based on session-stored preferences.",
+      "tags": ["weather", "meteorology", "stateful", "real-time"]
+    },
+    {
+      "id": "preference_management",
+      "name": "Unit Preference Management",
+      "description": "Set and update user preferences for temperature units (Celsius/Fahrenheit) in the session state.",
+      "tags": ["settings", "preferences", "conversion"]
+    },
+    {
+      "id": "time_retrieval",
+      "name": "City Time Check",
+      "description": "Provide the current local time for supported cities like New York.",
+      "tags": ["time", "clock", "timezone"]
+    }
+  ]
+}
