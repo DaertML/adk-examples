@@ -1,0 +1,14 @@
+services:
+  adk-web:
+    build: .
+    network_mode: host
+    container_name: adk_web_mcp
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./mcp_files:/app/mcp_files
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
