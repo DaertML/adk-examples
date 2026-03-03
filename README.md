@@ -4,6 +4,8 @@ Repo with examples of ADK agents
 # Introduction
 I gave ADK a try, as I have seen it in production in some middle sized companies, and it does not have so much hype behind lately... so wanted to see what it could do, how it would do it and see if I can use it without using Google products.
 
+The other reason I wanted to test ADK is due to the need to run agents remotely and communicate them over the network; for such A2A was created by Google; even though other agent frameworks support it, I didnt have much luck with them and did not work as I would expect in many occasions, thus the need to try the Google ADK framework.
+
 Some of the agents are meant to be used from the "adk web" web UI, I expect you know how to use ADK before playing with this. Many of the examples are copy/pasted/adapted from the Google's tutorials. Each example is explained from a high level point of view next, and I mention which are the ones that had more changes to work with local Ollama environments.
 
 Some of the projects (those related with A2A are meant to be used together); this is also explained below; for the rest, they are individual examples of agents to run.
