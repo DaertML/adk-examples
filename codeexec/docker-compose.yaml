@@ -1,0 +1,8 @@
+services:
+  math-agent-web:
+    build: .
+    container_name: math-sandbox
+    network_mode: host
+    environment:
+      - OLLAMA_API_BASE=http://127.0.0.1:11434
+    restart: unless-stopped
