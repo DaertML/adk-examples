@@ -15,19 +15,19 @@ I only encountered two points that scared me of being tied to Google: the execut
 I leave the examples as the most "template form" as possible and simplest that you can grow your agent from; as it is usually the case that having complex examples make it hard to evolve into other use cases.
 
 # Examples and their use case
-- a2a_consumer:
-- a2a_consumer_multiple:
-- a2aserver_pydantic:
+- a2a_consumer: agent that uses multiple remote agents using the A2A protocol;such agents need to be running. a version with a single remote agent is also provided.
+- a2a_consumer_multiple: same idea as the a2a_consumer but with multiple agents. kind of replicated code, sorry :S
+- a2aserver_pydantic: simple example of an a2aserver that runs an agent that is consumed by the projects a2aconsumer mentioned above.
 - codeexec: implements a simple python sandbox that is used by the LLM to run code and get the answer from user requests. The sandbox runs on a docker container to avoid damage caused by the agent to your machine.
 - devteam: simple example of an agentic workflow, in which data is transformed by multiple chained LLM calls; that attempt to write and review code.
 - mcp_client: example of mcp client running on docker. This is meant to be used to call the mcp_server tools exposed repo.
 - mcp_server: example of an MCP server implemented with ADK, meant to be consumed by the mcp_client.
 - mcp_server_remote: example of an MCP server that is meant to be executed remotely and consumed by MCP clients.
 - mcptools: simple example that uses a local MCP server (stdio); that exports tools to do operations in the filesystem.
-- multi_agent:
-- multi_agent_web: 
+- multi_agent: example of a multi agent environment
+- multi_agent_web: example like the previous mentioned; this time, meant to run from the web ui of the "adk web"
 - openapi_tools: example that convers an OpenAPI definition into tools for an agent and makes use of them to resolve user queries.
-- react:
+- react: unfinished agent that should implement the ReACT agentic pattern. sorry :S
 - simple_agent: the first example that you would find for an agent use case with simple tool calls; adapted to work on Ollama.
 - tool_state_web: meant to be executed using "adk web", it also contains a test suite to run from the cli of ADK. and a command to serve this as an A2A server that is later consumed by other agents. It manages state inside the tools, which is something surprising to me when I tried ADK, I did not store state before in tools, and was more of something to store in a single centralized KeyValue store.
 - tool_state_web_guard: same as the previous example, it contains guardrails using llama-guard, all from ollama, all running locally.
